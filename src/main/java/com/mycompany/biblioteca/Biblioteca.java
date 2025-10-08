@@ -4,6 +4,9 @@
 
 package com.mycompany.biblioteca;
 
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
 /**
  *
  * @author jonyco
@@ -11,6 +14,13 @@ package com.mycompany.biblioteca;
 public class Biblioteca {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BibliotecaPU");
+        System.out.println("------------");
+        System.out.println("diagrama de la DB generado exitosamente");
+        System.out.println("revisa tu mysql para confirmar la creacion de tablas y relaciones");
+
+  
+        emf.close();
     }
 }
